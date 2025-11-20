@@ -196,7 +196,6 @@ def calculate_final_scores(score_dict: dict,
     """
     Calculate final scores per molecule
     """
-
     names = sampler_data["molecules"]
     smiles = sampler_data["smiles"]
     inchikey_list = sampler_data["inchikeys"]
@@ -251,6 +250,7 @@ def calculate_final_scores(score_dict: dict,
             json.dump(all_scores, f, ensure_ascii=False, indent=2)
 
     return batch_scores
+
 
 def main(config: dict):
     iterative_sampling_loop(
